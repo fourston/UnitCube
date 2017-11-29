@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="nojs html css_verticalspacer" lang="ru-RU">
+ <head>
+   {% load static %}
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="generator" content="2018.0.0.379"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+  <title>Home</title>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'web_develop/style.css' %}"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.css">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+   </head>
+ <body>
+		<div class="wrapper">
+			<div class="header">
+				<div class="logo">
+				</div>
+				<div class="menu">
+					<ul id="menu">
+						<li>О нас</li>
+						<li>Портфолио</li>
+						<li>Услуги</li>
+						<li>Отзывы</li>
+						<li>Написать нам</li>
+					</ul>
+				</div>
+				<div>
+				<div class="badass_sign">
+					<div class="container text-center">
+						<h1>Мы самые лучшие</h1>
+							<p>
+								sdadadasdasdas
+							</p>
+					</div>
+				</div>
+				</div>
+			</div>
+			<div class="wrapper">
+
+					<div class="layer">
+						<div class="container">
+							<div class="steps">
+							</div>
+						</div>
+					</div>
+
+					<div class="portfolio">
+
+            {% if portfolio_list %}
+            {% for portfolio in portfolio_list %}
+              <img src="{{ portfolio.preview_img.url }}">
+              {% endfor %}
+
+            {% else %}
+              <p>No works uploaded yet</p>
+            {% endif %}
+					</div>
+
+          <!-- Services -->
+					<div class="layer">
+						<div class="container">
+							<div class="steps">
+                {% if services_list %}
+                <ul>
+                  {% for service in services_list %}
+
+                  <li style="color: black">{{service.title}}</li>
+
+                  {% endfor %}
+                </ul>
+
+                {% else %}
+                  <p>Nothing uploaded yet</p>
+                {% endif %}
+							</div>
+						</div>
+					</div>
+
+					<div class="backfeed">
+            {% if testimonial_list %}
+            <ul>
+              {% for testimonial in testimonial_list %}
+
+              <li>{{testimonial.description}}</li>
+
+              {% endfor %}
+            </ul>
+
+            {% else %}
+              <p>Nothing uploaded yet</p>
+            {% endif %}
+					</div>
+
+
+			</div>
+	<div class="footer">
+	</div>
+		</div>
+   </body>
+</html>
