@@ -1,0 +1,102 @@
+html
+{min-height:100%;min-width:100%;-ms-text-size-adjust:none;}
+body,div,dl,dt,dd,ul,ol,li,nav,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,a
+{margin:0px;padding:0px;border-width:0px;border-style:solid;border-color:transparent;-webkit-transform-origin:left top;-ms-transform-origin:left top;-o-transform-origin:left top;transform-origin:left top;background-repeat:no-repeat; color:white;}
+@font-face {
+    font-family: AvantGarde; /* Имя шрифта */
+    src: url(fonts/avantgardegothicc.otf); /* Путь к файлу со шрифтом */
+   }
+
+ body{
+	font-family: AvantGarde !important;
+ }
+   
+.header {
+background: url(assets/white.png) top left no-repeat;
+height:980px;
+background-size: 100% 980px;
+margin: 0px 0px;
+z-index: 999;
+}
+
+.logo {
+	position: absolute;
+	margin: 50px 50px;
+	background: url(assets/logo_white.png) no-repeat;
+	height:10%;		
+	width:10%;
+}
+
+.menu {
+	float: right;
+	margin: 50px 10px;
+}
+
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#menu li{
+    display: inline;
+	margin: 10px;
+	color: white;
+	font-size: 14pt;
+}
+
+.badass_sign{
+	margin: 25% 0px;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	color: white;
+}
+.steps{
+	margin-top:100px;
+	position: absolute;
+	background: url(assets/icons.png) no-repeat;
+	height:500px;
+	width:1140px;
+	background-size: 100% 500px;
+}
+
+.portfolio{
+background: url(assets/portfolio.jpg) top left no-repeat;
+height:980px;
+background-size: 100% 980px;
+margin-top: -95px;
+display: block;
+    z-index: 3;
+}
+
+.layer {
+	background: url(assets/Maket.png) top left no-repeat;
+	height:700px;
+	background-size: 100% 700px;
+	z-index: 5;
+    position: relative;
+	margin-top:-150px;
+}
+
+.backfeed{
+background: url(assets/cofee.jpg) top left no-repeat;
+height:980px;
+background-size: 100% 980px;
+margin-top: -95px;
+display: block;
+    z-index: 3;
+}
+
+
+.footer {
+	background: url(assets/green_stripe.png) top left no-repeat;
+height:200px;
+background-size: 100% 250px;
+margin-top: -150px;
+position: relative;
+    z-index: 6;
+}
+}
